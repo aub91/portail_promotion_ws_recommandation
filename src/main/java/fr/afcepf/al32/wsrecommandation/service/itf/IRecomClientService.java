@@ -1,4 +1,4 @@
-package fr.afcepf.groupe2.service;
+package fr.afcepf.al32.wsrecommandation.service.itf;
 
 import fr.afcepf.al32.groupe2.ws.dto.ClientRequestDto;
 import fr.afcepf.al32.groupe2.ws.dto.SearchByClientResponseDto;

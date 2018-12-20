@@ -1,4 +1,4 @@
-package fr.afcepf.al32.rest;
+package fr.afcepf.al32.wsrecommandation.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.afcepf.al32.groupe2.ws.dto.ClientRequestDto;
 import fr.afcepf.al32.groupe2.ws.dto.SearchByClientResponseDto;
-import fr.afcepf.groupe2.service.IRecomClientService;
+import fr.afcepf.al32.wsrecommandation.service.itf.IRecomClientService;
 
 
 @RestController
