@@ -3,10 +3,7 @@
   <groupId>fr.afcepf.al32.groupe2</groupId>
   <artifactId>portail_promotion_ws_recommandation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
-  
-  
-  
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -20,6 +17,7 @@
 		<!-- <maven.compiler.source>1.8</maven.compiler.source> <maven.compiler.target>1.8</maven.compiler.target> -->
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<start-class>com.formation.app.Application</start-class>
 	</properties>
 
 	<dependencies>
@@ -34,11 +32,14 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
-<dependency>
-    <groupId>org.elasticsearch</groupId>
-    <artifactId>elasticsearch</artifactId>
-    <version>5.6.0</version>
-</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -92,8 +93,6 @@
 			<artifactId>hibernate-core</artifactId> <!-- with hibernate-entitymanager inside -->
 			<!-- version conseille par spring-boot-starter-parent -->
 		</dependency>
-
-
 		<!-- pour vues de type ".jsp" avec eventuellement jstl -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
@@ -103,7 +102,6 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>
 			<artifactId>okhttp</artifactId>
@@ -120,7 +118,6 @@
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/com.google.api-client/google-api-client -->
 		<dependency>
 			<groupId>com.google.api-client</groupId>
@@ -131,11 +128,11 @@
 
 	<build>
 		<plugins>
-			<!-- spring-boot-maven-plugin useful for ... -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
