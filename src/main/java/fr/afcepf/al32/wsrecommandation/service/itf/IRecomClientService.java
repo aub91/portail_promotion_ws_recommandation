@@ -5,6 +5,7 @@ import fr.afcepf.al32.groupe2.ws.dto.SearchByClientResponseDto;
 
 public interface IRecomClientService {
 
+	
 	SearchByClientResponseDto rechercherRecommandationByClientReservation(ClientRequestDto clientRequestDto);
 
 }

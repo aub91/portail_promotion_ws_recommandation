@@ -1,7 +1,13 @@
 package fr.afcepf.al32.wsrecommandation.dao.itf;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
+import java.util.List;
 
-public interface IRecommandationClientDao extends MongoRepository<fgdgdfg,/*type d'argument d'entree */> {
+import fr.afcepf.al32.wsrecommandation.entity.Promotion;
+import fr.afcepf.al32.wsrecommandation.entity.Reservation;
 
+public interface IRecommandationClientDao {
+
+	List<Promotion> findByClientEtCategorie(Long clientId, String categorieLibelle);
+
+	
 }

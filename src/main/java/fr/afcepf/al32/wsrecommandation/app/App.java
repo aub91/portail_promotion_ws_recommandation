@@ -6,8 +6,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication(scanBasePackages = { "fr.afcepf.al32.wsrecommandation" })
-@EnableMongoRepositories("fr.afcepf.al32.wsrecommandation")
-//@EntityScan(basePackages= {"fr.afcepf.al32.wsrecommandation"})
 public class App extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
