@@ -1,5 +1,7 @@
 package fr.afcepf.al32.wsrecommandation.dao.itf;
 
-public interface IRecommandationClientDao {
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface IRecommandationClientDao extends MongoRepository</*entity_name*/,/*type d'argument d'entree */> {
 
 }
