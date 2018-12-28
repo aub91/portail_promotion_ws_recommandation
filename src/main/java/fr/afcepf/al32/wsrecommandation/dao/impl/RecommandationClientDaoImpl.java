@@ -37,7 +37,7 @@ public class RecommandationClientDaoImpl implements IRecommandationClientDao {
 		 * Etape d'aggrégation pour la recherche géographique
 		 */
 		String geoNearStep = String.format(
-				"{$geoNear: {near: { type: 'Point', coordinates: [ %s , %s ] }, distanceField: 'dist', key: 'shops.location', maxDistance: 2, num: 5 }}",
+				"{$geoNear: {near: { type: 'Point', coordinates: [ %s , %s ] }, distanceField: 'dist', key: 'shops.location', maxDistance: 10, num: 10 }}",
 				sourcePoint.getX(), sourcePoint.getY());
 		Document geoNear = Document.parse(geoNearStep);
 
