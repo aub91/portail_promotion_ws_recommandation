@@ -37,7 +37,7 @@ public class RecommandationClientDaoImpl implements IRecommandationClientDao {
 		 * Etape d'aggrégation pour la recherche géographique
 		 */
 		String geoNearStep = String.format(
-				"{$geoNear: {near: { type: 'Point', coordinates: [ %s , %s ] }, distanceField: 'dist', key: 'shops.location', maxDistance: 30, num: 10 }}",
+				"{$geoNear: {near: { type: 'Point', coordinates: [ %s , %s ] }, distanceField: 'dist', key: 'shops.location', num: 10 }}",
 				sourcePoint.getX(), sourcePoint.getY());
 		Document geoNear = Document.parse(geoNearStep);
 
@@ -49,7 +49,7 @@ public class RecommandationClientDaoImpl implements IRecommandationClientDao {
 		 * et la catégorie des produits.
 		 */
 		String matchStep = String.format(
-				"{$match: {$and: [{dateCreation: {$gte: ISODate('%s')}}, {$or: [{'product.category.libelle': {$eq: %s}}, {'product.category.ancestors': {$eq: %s}}]}]}}",
+				"{$match: {$and: [{dateCreation: {$gte: ISODate('%s')}}, {$or: [{'product.category.libelle': {$eq: '%s'}}, {'product.category.ancestors': {$eq: '%s'}}]}]}}",
 				date, category, category);
 
 		Document match = Document.parse(matchStep);

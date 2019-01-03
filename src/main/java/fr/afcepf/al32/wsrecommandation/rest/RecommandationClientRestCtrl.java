@@ -12,10 +12,7 @@ import org.springframework.data.geo.Point;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import fr.afcepf.al32.groupe2.ws.wsPromoTemplate.dto.PromotionTemplateResultDto;
 import fr.afcepf.al32.groupe2.ws.wsPromoTemplate.dto.TopPromotionTemplateResultDto;
@@ -40,7 +37,7 @@ public class RecommandationClientRestCtrl {
 	@Autowired
 	private MongoOperations mongoOps;
 
-	@PostMapping("/ByClient")
+	@GetMapping("/ByClient")
 	public TopPromotionTemplateResultDto searchByClientsFavoriteCategory(@RequestParam String sourceLong,
 			@RequestParam String sourceLat, @RequestParam String category) {
 
